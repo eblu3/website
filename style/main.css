@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'Ferrite Core DX Medium';
+    src: url('../assets/FerriteCoreDX-Medium.woff2') format('woff2'),
+         url('../assets/FerriteCoreDX-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Visitor TT1 BRK';
+    src: url('../assets/visitor1.woff2') format('woff2'),
+         url('../assets/visitor1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: "Verdana", "Bitstream Vera Sans", system-ui, sans-serif;
+    font-size: 12px;
+}
+
+h1 {
+    font-family: "Verdana", "Bitstream Vera Sans", system-ui, sans-serif;
+    font-size: 36px;
+}
+
+h2 {
+    font-family: "Ferrite Core DX Medium";
+    font-size: 32px;
+    text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white,
+    2px 0px 0 white, -2px 0px 0 white, 0px 2px 0 white, 0px -2px white;
+    filter: drop-shadow(0 2px 1px rgba(0,0,0,0.5));
+    margin: 2px;
+    margin-top: -8px;
+}
+
+h2.with-gradient {
+    position: relative;
+}
+
+h2.with-gradient::before {
+    position: absolute;
+    content: attr(text);
+    color: transparent;
+    text-shadow: none;
+    filter: none;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5));
+    background-clip: text;
+}
+
+.title-box {
+    background-color: white;
+    display: block;
+    position: absolute;
+    padding-left: 4px;
+    padding-right: 4px;
+    float: left;
+    transform: translateX(-4px) translateY(-32px);
+}
+
+.page-container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16vh;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.25));
+}
+
+/* HEADER BAR */
+.page-header {
+    min-height: 64px;
+    display: flex;
+}
+
+.page-header a {
+    text-decoration: none;
+}
+
+/* home link */
+.link-home {
+    display: flex;
+    flex-direction: row;
+    background-color: #404040;
+    border-left: 1px solid black;
+}
+
+.link-home p {
+    position: absolute;
+    font-family: "Visitor TT1 BRK";
+    font-size: 10px;
+    color: black;
+    text-align: right;
+    margin: 0;
+    bottom: 4px;
+    right: 16px;
+}
+
+.logo {
+    height: 64px;
+    width: 64px;
+    background-color: white;
+    border-top: 1px solid black;
+}
+
+.logo img {
+    float: left;
+    filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.25));
+    transform: translateX(-50%) translateY(-66%);
+}
+
+.link-home-end {
+    width: 64px;
+    height: 64px;
+    background-color: white;
+    position: relative;
+    border-top: 1px solid black;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.link-home-end-border {
+    filter:drop-shadow(1.5px 0 0 black);
+}
+
+/* header background */
+.page-header-bg {
+    background-color: #404040;
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+}
+
+.page-header-end {
+    width: 64px;
+    height: 64px;
+    background-color: #404040;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    align-self: flex-end;
+    border-bottom: 1px solid black;
+}
+
+/* header links */
+.page-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-links div {
+    width: 128px;
+    height: 64px;
+    background-image: url(../assets/diag-pinstripe.svg);
+    background-size: 8px;
+    border-bottom: 1px solid black;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.page-links div p {
+    position: absolute;
+    bottom: 1px;
+    right: 3.5px;
+    margin: 0;
+    font-family: "Visitor TT1 BRK";
+    font-size: 10px;
+    color: white;
+    z-index: 2 !important;
+}
+
+.link-shine {
+    position: absolute !important;
+    top: 1px;
+    left: 1px;
+    width: 126px !important;
+    height: 62px !important;
+    background-size: 100% !important;
+    background-image: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0)) !important;
+    border-bottom: none !important;
+    z-index: 3 !important;
+}
+
+.link-text-box {
+    position: absolute !important;
+    bottom: 0;
+    width: 128px !important;
+    height: 13px !important;
+    background-image: none !important;
+    border-bottom: none !important;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1 !important;
+}
+
+.link-icon {
+    position: absolute;
+    width: 128px;
+}
+
+.link-about {
+    background-color: #ff4848;
+}
+
+.icon-about {
+    transform: translateX(-12.5%) translateY(-6.25%);
+}
+
+.link-gallery {
+    background-color: #ff931e;
+}
+
+.icon-gallery {
+    transform: translateX(-18.75%) translateY(-28.125%);
+}
+
+.link-blog {
+    background-color: #3578ff;
+}
+
+.icon-blog {
+    transform: translateX(-12.5%) translateY(-28.125%);
+}
+
+.link-links {
+    background-color: #64c961;
+}
+
+.icon-links {
+    transform: translateX(-12.5%) translateY(-25%);
+}
+
+/* PAGE BODY */
+.center {
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+/* banner */
+.page-banner {
+    width: 32px;
+    padding: 16px;
+    min-height: 492px;
+    display: flex;
+    white-space: nowrap;
+}
+
+.page-banner h1 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: translateX(-18%);
+    font-family: "Ferrite Core DX Medium";
+    font-size: 48px;
+    color: rgba(0,0,0,0.5);
+    margin: 0;
+    align-self: flex-end;
+}
+
+.page-body {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+/* FOOTER */
+.page-footer-top {
+    background-color: #404040;
+    min-height: 16px;
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.page-footer-begin {
+    width: 64px;
+    height: 64px;
+    background-color: #404040;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.page-footer-content {
+    background-color: #404040;
+    color: white;
+    max-height: 64px;
+}
+
+.page-footer-content p {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    text-align: right;
+    color: lightgray;
+}
+
+.page-footer-content a {
+    color: lightgray;
+}
+
+.page-footer-content a:hover {
+    color: white;
+}
+
+.page-footer-content a:active {
+    color: gray;
+}
